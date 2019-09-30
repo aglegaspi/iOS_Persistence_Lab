@@ -9,22 +9,30 @@
 import UIKit
 
 class DetailViewController: UIViewController {
-
+    
+    var photo: Photo!
+    @IBOutlet weak var photoView: UIImageView!
+    @IBOutlet weak var likesView: UILabel!
+    @IBOutlet weak var favoritesView: UILabel!
+    @IBOutlet weak var tagsView: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        ImageHelper.shared.getImage(urlStr: photo.largeImageURL) { (result) in
+            DispatchQueue.main.async {
+                switch result {
+                case .success (let success):
+                    self.photoView.image = success
+                case .failure(let error):
+                    print(error)
+                }
+            }
+        }
+        
+        likesView.text = "Likes: \(photo.likes)"
+        favoritesView.text = "Favorited: \(photo.favorites)"
+        tagsView.text = "Tags: \(photo.tags)"
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
