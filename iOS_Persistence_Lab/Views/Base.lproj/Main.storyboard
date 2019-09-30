@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="PLG-Vs-cNC">
     <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -48,13 +48,27 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="zdw-U0-5UC">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PhotoCell" id="zdw-U0-5UC" customClass="CollectionViewCell" customModule="iOS_Persistence_Lab" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="142" height="141"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
                                             <rect key="frame" x="0.0" y="0.0" width="142" height="141"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bVg-Ff-88h">
+                                                    <rect key="frame" x="0.0" y="0.0" width="142" height="141"/>
+                                                </imageView>
+                                            </subviews>
                                         </view>
+                                        <constraints>
+                                            <constraint firstItem="bVg-Ff-88h" firstAttribute="leading" secondItem="zdw-U0-5UC" secondAttribute="leading" id="HXT-sv-T71"/>
+                                            <constraint firstAttribute="bottom" secondItem="bVg-Ff-88h" secondAttribute="bottom" id="Qh3-P2-AfT"/>
+                                            <constraint firstAttribute="trailing" secondItem="bVg-Ff-88h" secondAttribute="trailing" id="mc5-Nu-BTW"/>
+                                            <constraint firstItem="bVg-Ff-88h" firstAttribute="top" secondItem="zdw-U0-5UC" secondAttribute="top" id="o2G-B2-TZc"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="imageView" destination="bVg-Ff-88h" id="cxT-ok-yZO"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
@@ -72,6 +86,10 @@
                         <viewLayoutGuide key="safeArea" id="Rt9-c4-QDq"/>
                     </view>
                     <navigationItem key="navigationItem" id="CeX-Ot-t2Z"/>
+                    <connections>
+                        <outlet property="collectionView" destination="dOb-Kz-bpt" id="JSW-LA-wQA"/>
+                        <outlet property="searchBar" destination="PMX-IG-k7G" id="nOJ-A6-LbL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="E12-Dz-KLy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -16,6 +16,14 @@
 		EC572C5C23429079002CC109 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC572C5B23429079002CC109 /* DetailViewController.swift */; };
 		EC572C5E2342908F002CC109 /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC572C5D2342908F002CC109 /* FavoriteViewController.swift */; };
 		EC572C61234290F9002CC109 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC572C60234290F9002CC109 /* CollectionViewCell.swift */; };
+		EC572C642342950B002CC109 /* PersistenceHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC572C632342950B002CC109 /* PersistenceHelper.swift */; };
+		EC572C6723429583002CC109 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC572C6623429583002CC109 /* Photo.swift */; };
+		EC572C6A23429980002CC109 /* PhotoPersistenceHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC572C6923429980002CC109 /* PhotoPersistenceHelper.swift */; };
+		EC572C6C23429B04002CC109 /* NetworkHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC572C6B23429B04002CC109 /* NetworkHelper.swift */; };
+		EC572C6F23429BA2002CC109 /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC572C6E23429BA2002CC109 /* AppError.swift */; };
+		EC572C7123429CF3002CC109 /* PhotoAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC572C7023429CF3002CC109 /* PhotoAPIClient.swift */; };
+		EC572C752342A48A002CC109 /* Secrets.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC572C742342A48A002CC109 /* Secrets.swift */; };
+		EC572C772342B1E3002CC109 /* ImageHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC572C762342B1E3002CC109 /* ImageHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +50,14 @@
 		EC572C5B23429079002CC109 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		EC572C5D2342908F002CC109 /* FavoriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewController.swift; sourceTree = "<group>"; };
 		EC572C60234290F9002CC109 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
+		EC572C632342950B002CC109 /* PersistenceHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceHelper.swift; sourceTree = "<group>"; };
+		EC572C6623429583002CC109 /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
+		EC572C6923429980002CC109 /* PhotoPersistenceHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPersistenceHelper.swift; sourceTree = "<group>"; };
+		EC572C6B23429B04002CC109 /* NetworkHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkHelper.swift; sourceTree = "<group>"; };
+		EC572C6E23429BA2002CC109 /* AppError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppError.swift; sourceTree = "<group>"; };
+		EC572C7023429CF3002CC109 /* PhotoAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoAPIClient.swift; sourceTree = "<group>"; };
+		EC572C742342A48A002CC109 /* Secrets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Secrets.swift; sourceTree = "<group>"; };
+		EC572C762342B1E3002CC109 /* ImageHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,7 +103,10 @@
 				EC572C62234290FE002CC109 /* Views */,
 				EC572C5F23429094002CC109 /* Controllers */,
 				EC572C3F23428A6B002CC109 /* Assets.xcassets */,
+				EC572C652342956E002CC109 /* Persistence */,
 				EC572C4423428A6B002CC109 /* Info.plist */,
+				EC572C6D23429B0E002CC109 /* Networking */,
+				EC572C6823429587002CC109 /* Models */,
 			);
 			path = iOS_Persistence_Lab;
 			sourceTree = "<group>";
@@ -127,6 +146,35 @@
 				EC572C60234290F9002CC109 /* CollectionViewCell.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		EC572C652342956E002CC109 /* Persistence */ = {
+			isa = PBXGroup;
+			children = (
+				EC572C632342950B002CC109 /* PersistenceHelper.swift */,
+				EC572C6923429980002CC109 /* PhotoPersistenceHelper.swift */,
+			);
+			path = Persistence;
+			sourceTree = "<group>";
+		};
+		EC572C6823429587002CC109 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				EC572C6623429583002CC109 /* Photo.swift */,
+				EC572C742342A48A002CC109 /* Secrets.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		EC572C6D23429B0E002CC109 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				EC572C6B23429B04002CC109 /* NetworkHelper.swift */,
+				EC572C6E23429BA2002CC109 /* AppError.swift */,
+				EC572C7023429CF3002CC109 /* PhotoAPIClient.swift */,
+				EC572C762342B1E3002CC109 /* ImageHelper.swift */,
+			);
+			path = Networking;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -230,10 +278,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC572C7123429CF3002CC109 /* PhotoAPIClient.swift in Sources */,
+				EC572C752342A48A002CC109 /* Secrets.swift in Sources */,
+				EC572C6723429583002CC109 /* Photo.swift in Sources */,
+				EC572C6C23429B04002CC109 /* NetworkHelper.swift in Sources */,
+				EC572C6F23429BA2002CC109 /* AppError.swift in Sources */,
 				EC572C61234290F9002CC109 /* CollectionViewCell.swift in Sources */,
+				EC572C642342950B002CC109 /* PersistenceHelper.swift in Sources */,
 				EC572C5C23429079002CC109 /* DetailViewController.swift in Sources */,
+				EC572C772342B1E3002CC109 /* ImageHelper.swift in Sources */,
 				EC572C3923428A68002CC109 /* AppDelegate.swift in Sources */,
 				EC572C5E2342908F002CC109 /* FavoriteViewController.swift in Sources */,
+				EC572C6A23429980002CC109 /* PhotoPersistenceHelper.swift in Sources */,
 				EC572C5A2342905B002CC109 /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
