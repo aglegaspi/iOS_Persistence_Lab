@@ -11,6 +11,8 @@ import UIKit
 class DetailViewController: UIViewController {
     
     var photo: Photo!
+    //var favorite = Favorite()
+    
     @IBOutlet weak var photoView: UIImageView!
     @IBOutlet weak var likesView: UILabel!
     @IBOutlet weak var favoritesView: UILabel!
@@ -35,4 +37,13 @@ class DetailViewController: UIViewController {
         tagsView.text = "Tags: \(photo.tags)"
     }
 
+    @IBAction func buttonPressed(_ sender: Any) {
+        do {
+            try FavoritePersistenceHelper.manager.save(newFavorite: photo)
+            print("successfully added to favorites")
+        } catch {
+            return
+        }
+        
+    }
 }

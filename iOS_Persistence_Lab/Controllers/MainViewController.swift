@@ -108,6 +108,7 @@ extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSour
 }
 
 extension MainViewController: UISearchBarDelegate {
+    
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         searchString = searchBar.text ?? ""
         loadData(search: searchString ?? "")
