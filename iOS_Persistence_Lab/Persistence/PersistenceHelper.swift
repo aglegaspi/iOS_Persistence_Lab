@@ -1,6 +1,7 @@
 import Foundation
 
 struct PersistenceHelper<T: Codable> {
+    
     func getObjects() throws -> [T] {
         guard let data = FileManager.default.contents(atPath: url.path) else {
             return []

@@ -26,6 +26,7 @@
 		EC572C772342B1E3002CC109 /* ImageHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC572C762342B1E3002CC109 /* ImageHelper.swift */; };
 		EC572C792342C3A4002CC109 /* FavoritePersistenceHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC572C782342C3A4002CC109 /* FavoritePersistenceHelper.swift */; };
 		EC572C7B2342C3E6002CC109 /* Favorite.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC572C7A2342C3E6002CC109 /* Favorite.swift */; };
+		EC572C7D23438C0F002CC109 /* FavoriteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC572C7C23438C0F002CC109 /* FavoriteTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +63,7 @@
 		EC572C762342B1E3002CC109 /* ImageHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageHelper.swift; sourceTree = "<group>"; };
 		EC572C782342C3A4002CC109 /* FavoritePersistenceHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritePersistenceHelper.swift; sourceTree = "<group>"; };
 		EC572C7A2342C3E6002CC109 /* Favorite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Favorite.swift; sourceTree = "<group>"; };
+		EC572C7C23438C0F002CC109 /* FavoriteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,6 +149,7 @@
 			isa = PBXGroup;
 			children = (
 				EC572C3C23428A68002CC109 /* Main.storyboard */,
+				EC572C7C23438C0F002CC109 /* FavoriteTableViewCell.swift */,
 				EC572C60234290F9002CC109 /* CollectionViewCell.swift */,
 			);
 			path = Views;
@@ -293,6 +296,7 @@
 				EC572C6F23429BA2002CC109 /* AppError.swift in Sources */,
 				EC572C61234290F9002CC109 /* CollectionViewCell.swift in Sources */,
 				EC572C642342950B002CC109 /* PersistenceHelper.swift in Sources */,
+				EC572C7D23438C0F002CC109 /* FavoriteTableViewCell.swift in Sources */,
 				EC572C5C23429079002CC109 /* DetailViewController.swift in Sources */,
 				EC572C772342B1E3002CC109 /* ImageHelper.swift in Sources */,
 				EC572C3923428A68002CC109 /* AppDelegate.swift in Sources */,
